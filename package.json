@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./public/output.css --watch"
+  },
+  "dependencies": {
+    "nuxt": "^3.16.1",
+    "tailwindcss-animated": "^2.0.0"
+  }
+}

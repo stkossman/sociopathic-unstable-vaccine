@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sociopathic unstable vaccine</title>
+    <link rel="icon" href="./img/frecked.png">
+    <link rel="stylesheet" href="output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white min-h-screen flex flex-col font-mont">
+    <div id="header"></div>
+    
+    <div class="mt-20 flex h-full screen flex-col">
+        <div class="relative z-20">
+            <div class="relative mx-auto my-20 flex max-w-6xl flex-col px-4 py-5 sm:px-6 lg:px-8">
+                <h1 class="text-center font-unifraktur text-7xl">Technologies</h1>
+                <div class="wysiwyg relative overflow-hidden bg-white py-10 md:py-20">
+                    <div class="relative px-4 sm:px-6 lg:px-8">
+                        <div class="prose prose-lg prose-indigo mx-auto flex max-w-7xl flex-col px-4 py-4 font-mont text-base text-gray-500 sm:px-6 lg:px-8">
+                            <p><strong class="text-black">Використані технології на сайті:</strong></p>
+                            <br>
+                            <ul class="list-inside list-disc ml-6">
+                                <li>HTML</li>
+                                <li>Для стилізації - <a href="https://v3.tailwindcss.com/docs/installation" class="hover:text-red-800 underline underline-offset-1">TailwindCSS v3.4.17</a></li>
+                                <li>Для анімацій - <a href="https://www.tailwindcss-animated.com" class="hover:text-red-800 underline underline-offset-1">TailwindCSS Animated</a> / JavaScript</li>
+                                <li>Для іконок - <a href="https://ionic.io/ionicons" class="hover:text-red-800 underline underline-offset-1">Ionicons</a></li>
+                                <li>Шрифти - <a href="https://fonts.google.com/specimen/UnifrakturMaguntia?query=unifraktur" class="hover:text-red-800 underline underline-offset-1">UnifrakturMaguntia</a> / <a href="https://fonts.google.com/specimen/Montserrat" class="hover:text-red-800 underline underline-offset-1">Montserrat</a></li>
+                            </ul>
+                            <br>
+                            <p><strong class="text-black">Дизайн брався/надихався з:</strong></p>
+                            <br>
+                            <ul class="list-inside list-disc ml-6">
+                                <li>Інтернет магазин <a href="https://thousand-cursed-enemies.com" class="hover:text-red-800 underline underline-offset-1">Thousand Cursed Enemies</a></li>
+                                <li>Інтернет магазин <a href="https://byedemoxworld.com" class="hover:text-red-800 underline underline-offset-1">byedemoxworld</a></li>
+                                <li>Музичний виконавець <a href="https://www.renmakesmusic.com" class="hover:text-red-800 underline underline-offset-1">Ren Gill</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        document.getElementById("header").innerHTML = fetch('header.html').then(response => response.text()).then(data => document.getElementById("header").innerHTML = data);
+        document.getElementById("footer").innerHTML = fetch('footer.html').then(response => response.text()).then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

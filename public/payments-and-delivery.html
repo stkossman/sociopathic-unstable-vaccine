@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sociopathic unstable vaccine</title>
+    <link rel="icon" href="./img/frecked.png">
+    <link rel="stylesheet" href="output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-white min-h-screen flex flex-col font-mont">
+    <div id="header"></div>
+
+    <div class="mt-20 flex h-full min-h-screen flex-col">
+        <div class="relative z-20">
+            <div>
+                <div class="relative mx-auto my-20 flex max-w-6xl flex-col px-4 py-5 sm:px-6 lg:px-8">
+                    <h1 class="text-center font-unifraktur text-7xl">Payment & Delivery</h1>
+                    <div class="wysiwyg relative overflow-hidden bg-white py-10 md:py-20">
+                        <div class="relative px-4 sm:px-6 lg:px-8">
+                            <div class="prose prose-lg prose-indigo mx-auto flex max-w-7xl flex-col px-4 py-4 font-mont text-base text-gray-500 sm:px-6 lg:px-8">
+                                <div>
+                                    <p class="font-bold text-black">Оплата карткою на сайті</p>
+                                    <p>Ви можете оплатити замовлення онлайн банківською карткою Visa та MasterCard. Оплата за допомогою платіжних карток здійснюється наступним способом:</p>
+                                    <ul class="list-disc list-inside ml-6">
+                                        <li>під час оформлення замовлення на сайті Вам буде запропоновано зробити вибір способу оплати.</li>
+                                        <li>у графі "Оплата" вам потрібно вибрати "Visa/MasterCard".</li>
+                                        <li>після цього Ви переадресуєте на сторінку системи безпечних платежів банку, де Вам необхідно буде підтвердити оплату.</li>
+                                    </ul>
+                                    <p>Ми не працюємо з післясплатою.</p>
+                                    <p>
+                                        <em>
+                                            Після оплати поверніться на сторінку вашого замовлення та запам'ятайте номер замовлення, він допоможе вам у разі якщо вам потрібно зв'язатись із нашою підтримкою. Надайте їм номер замовлення та ваше запитання.
+                                        </em>
+                                    </p>
+
+                                    <div>
+                                        <div><strong class="text-black">Доставка у відділення Нової Пошти по всій Україні</strong></div>
+                                        <div>&nbsp;</div>
+                                        <div>За допомогою доставки Нової Пошти Ви зможете отримати товар навіть у найвіддаленіших куточках України.</div>
+                                        <div>В середньому доставка займає <strong class="text-black">2-5 днів.</strong></div>
+                                        <div>Крім цього, оформлення замовлення може складати <strong class="text-black">5-10 днів.</strong></div>
+                                        <div>Вартість доставки Нової Пошти до відділення складає від <strong class="text-black">40 грн.</strong></div>
+                                        <div>Доставка оплачується під час оформлення замовлення.</div>
+                                        <div>&nbsp;</div>
+                                        <div>Якщо у період до 10 днів у додатку нової пошти не з'являється ваше відправлення, просимо зв'язатись із нашою підтримкою для уточнення деталей.</div>
+                                        <div>&nbsp;</div>
+                                        <div><strong class="text-black">Міжнародна доставка</strong></div>
+                                        <div>&nbsp;</div>
+                                        <div><strong class="text-black">Доставка закордон здійснюється за допомогою Укрпошти та Нової Пошти, вартість доставки також оплачується при оформленні замовлення.</strong></div>
+                                        <div>&nbsp;</div>
+                                        <div>В окремих випадках вартість покупки та доставки може оплачуватись окремо, зверніть увагу на відповідну інформацію при оформленні замовлення.</div>
+                                        <div>&nbsp;</div>
+                                        <div><strong class="text-black">Період оформлення замовлень може складати 10-20 днів. Після оформлення вам надішлють лист на електронну пошту із трекінговим кодом для відстеження ( стосується лише міжнародних відправок).</strong></div>
+                                        <div>
+                                            <br>
+                                            Відслідковувати ваші відправки потрібно у сервісах Нової Пошти або Укр Пошти, залежно від того яким способом було здійснене відправлення (посилки формату 595******** - Нова Пошта, формату AA********UA - УкрПошта)
+                                            <br>
+                                            <br>
+                                        </div>
+                                        <div>Посилання на сервіси для відстеження:</div>
+                                        <div>
+                                            <ul class="list-disc list-inside ml-6">
+                                                <li><a href="https://novapost.com/en-ua/" target="_blank" class="text-[#4F46E5] underline underline-offset-1">Трекінг посилок Нова Пошта</a></li>
+                                                <li><a href="https://track.ukrposhta.ua/tracking_EN.html" target="_blank" class="text-[#4F46E5] underline underline-offset-1">Трекінг посилок УкрПошта</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+        document.getElementById("header").innerHTML = fetch('header.html').then(response => response.text()).then(data => document.getElementById("header").innerHTML = data);
+        document.getElementById("footer").innerHTML = fetch('footer.html').then(response => response.text()).then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

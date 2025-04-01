@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sociopathic unstable vaccine</title>
+    <link rel="icon" href="./img/frecked.png">
+    <link rel="stylesheet" href="output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white min-h-screen flex flex-col font-mont">
+    <div id="header"></div>
+
+    <div class="mt-20 flex h-full min-h-screen flex-col">
+        <div class="relative z-20">
+            <div class="relative mx-auto my-20 flex max-w-6xl flex-col px-4 py-5 sm:px-6 lg:px-8">
+                <h1 class="text-center font-unifraktur text-7xl">Exchanges</h1>
+                <div class="relative overflow-hidden bg-white py-10 md:py-20">
+                    <div class="relative px-4 sm:px-6 lg:px-8">
+                        <div class="prose prose-lg prose-indigo mx-auto flex max-w-7xl flex-col px-4 py-4 font-mont text-base text-gray-500 sm:px-6 lg:px-8">
+                            <p>Як компенсацію, згідно із законом України, ми надаємо Вам право обрати такий самий товар з іншої партії, або вибрати інший товар на ту саму суму грошей. Якщо Ви хочете обміняти заводський брак, доставку в обидві сторони оплачуємо ми. Якщо ви змінюєте якісний товар, за доставку платите Ви.
+                            <br>
+                            <br>
+                            <strong class="text-black">Бракований товар</strong>
+                            </p>
+                            <br>
+                            <p>Усунення дефекту неможливе.</p>
+                            <br>
+                            <p>На усунення дефекту потрібно більше двох тижнів.</p>
+                            <br>
+                            <p>Дефект змінює товар, отже, він не відповідає своєму опису в договорі про купівлю.</p>
+                            <br>
+                            <p>Бракований товар підлягає поверненню.</p>
+                            <br>
+                            <p>Після чого Ви вибираєте зручний для Вас спосіб компенсації:</p>
+                            <br>
+                            <ul class="list-inside list-disc ml-6">
+                                <li>обмін виробу на аналогічне такої ж якості (якщо на даний момент такого ж немає, Ви можете почекати, поки з’явиться або вибрати інший спосіб компенсації);</li>
+                                <li>отримати інший товар на ту саму суму, що Ви заплатили за бракований товар;</li>
+                                <li>повернення грошей на ту суму, за яку Ви купили цей товар.</li>
+                            </ul>
+                            <br>
+                            <p><strong class="text-black">Повернення якісного товару</strong></p>
+                            <br>
+                            <p>Друга причина – товар якісний, але він Вам просто не сподобався чи не підійшов за кольором, розміром тощо. Протягом 14-ти днів Ви маєте повне право повернути товар, що вам не сподобався.</p>
+                            <br>
+                            <p><strong class="text-black">Для цього є кілька умов, які мають бути дотримані з Вашого боку:</strong></p>
+                            <br>
+                            <ul class="list-inside list-disc ml-6">
+                                <li>збереження повної комплектації товару;</li>
+                                <li>збереження цілісного заводського пакування, пломби, печаток;</li>
+                                <li>товар збережений у тому вигляді, що було куплено;</li>
+                                <li>товар не використовувався.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        document.getElementById("header").innerHTML = fetch('header.html').then(response => response.text()).then(data => document.getElementById("header").innerHTML = data);
+        document.getElementById("footer").innerHTML = fetch('footer.html').then(response => response.text()).then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

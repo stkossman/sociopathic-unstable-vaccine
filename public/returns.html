@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sociopathic unstable vaccine</title>
+    <link rel="icon" href="./img/frecked.png">
+    <link rel="stylesheet" href="output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white h-screen flex flex-col font-mont">
+    <div id="header"></div>
+
+    <div class="mt-20 flex h-screen flex-col">
+        <div class="relative z-20">
+            <div class="relative mx-auto my-20 flex max-w-6xl flex-col px-4 py-5 sm:px-6 lg:px-8">
+                <h1 class="text-center font-unifraktur text-7xl">Returns</h1>
+                <div class="wysiwyg relative overflow-hidden bg-white py-10 md:py-20">
+                    <div class="relative px-4 sm:px-6 lg:px-8">
+                        <div class="prose prose-lg prose-indigo mx-auto flex max-w-7xl flex-col px-4 py-4 font-mont text-base text-gray-500 sm:px-6 lg:px-8">
+                            <p class="mb-6">Повернення  здійснюється протягом 14 днів з дня отримання замовлення.</p>
+                            <p class="mb-6">Товар повинен бути в упаковці, без слідів використання чи прання. В іншому випадку товар обміну та поверненню не підлягає.</p>
+                            <p class="mb-6">Для повернення та обміну товару зв'яжіться з нами зручним для вас способом. Потім, акуратно запакуйте товар, з усіма комплектуючими і надішліть посилку на адресу, яку надасть вам менеджер по роботі з клієнтами.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        document.getElementById("header").innerHTML = fetch('header.html').then(response => response.text()).then(data => document.getElementById("header").innerHTML = data);
+        document.getElementById("footer").innerHTML = fetch('footer.html').then(response => response.text()).then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
