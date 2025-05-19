@@ -9,6 +9,105 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <style>
+        .menu-toggle {
+            display: none;
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            width: 30px;
+            height: 24px;
+            position: relative;
+            z-index: 1001;
+            margin-left: 15px;
+        }
+
+        .menu-icon:hover {
+            color: #800000;
+        }
+
+        .menu-icon span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: currentColor;
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        .menu-overlay {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            z-index: 40;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            width: 100%;
+            height: 100%;
+        }
+
+        .menu-toggle:checked ~ .menu-overlay {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .menu-toggle:checked ~ .navigation-menu {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+            height: 100vh;
+            width: 100%;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 50;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .utility-menu {
+                display: none !important;
+            }
+        }
+
+        .menu-toggle:checked ~ .navigation-menu li {
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        .navigation-menu li a {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
 </head>
 <body class="bg-white h-screen flex flex-col font-mont">
     <div id="header"></div>

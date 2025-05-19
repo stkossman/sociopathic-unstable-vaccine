@@ -48,6 +48,104 @@
                 transform: translateY(-50%);
             }
         }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            width: 30px;
+            height: 24px;
+            position: relative;
+            z-index: 1001;
+            margin-left: 15px;
+        }
+
+        .menu-icon:hover {
+            color: #800000;
+        }
+
+        .menu-icon span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: currentColor;
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        .menu-overlay {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            z-index: 40;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            width: 100%;
+            height: 100%;
+        }
+
+        .menu-toggle:checked ~ .menu-overlay {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .menu-toggle:checked ~ .navigation-menu {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+            height: 100vh;
+            width: 100%;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 50;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .utility-menu {
+                display: none !important;
+            }
+        }
+
+        .menu-toggle:checked ~ .navigation-menu li {
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        .navigation-menu li a {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+        }
     </style>
 </head>
 <body>
@@ -64,14 +162,25 @@
                         <a href="./index.html">
                             <img src="./img/frecked.png" alt="thousand cursed enemies" class="h-[40px] drop-shadow-[0_0_18px_rgba(255,255,255,0.6)] hover:drop-shadow-[0_0_18px_rgba(178,0,0,1)]">
                         </a>
-                        <ul class="ml-auto mr-auto flex overflow-hidden transition-all duration-500 max-md:justify-center max-sm:fixed max-sm:right-0 max-sm:top-[72px] max-sm:h-0 max-sm:w-screen max-sm:flex-col max-sm:gap-5 max-sm:bg-black max-sm:text-center max-sm:opacity-0 md:gap-10">
+
+                        <div class="menu-overlay"></div>
+
+                        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                        <label for="menu-toggle" class="menu-icon hover:text-red-800">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+
+                        <ul class="navigation-menu ml-auto mr-auto flex overflow-hidden transition-all duration-500 max-md:justify-center max-sm:fixed max-sm:inset-0 max-sm:z-50 max-sm:h-0 max-sm:w-full max-sm:flex-col max-sm:items-center max-sm:justify-center max-sm:gap-8 max-sm:bg-black max-sm:text-center max-sm:text-xl max-sm:opacity-0 max-sm:pt-10 max-sm:pb-10 md:gap-10">
                             <li><a href="./index.html" class="transition-all hover:text-red-800">Home</a></li>
                             <li><a href="./payments-and-delivery.html" class="transition-all hover:text-red-800">Payment & Delivery</a></li>
                             <li><a href="./contacts.html" class="transition-all hover:text-red-800">Contact & Social Media</a></li>
                         </ul>
-                        <ul class="flex max-sm:ml-auto max-sm:gap-5 md:gap-10">
-                            <li class="flex cursor-pointer items-center gap-2 pr-[30px] text-[16px]">UA</li>
-                            <li><ion-icon name="bag-outline" class="w-[24px] h-[24px]"></ion-icon></li>
+
+                        <ul class="utility-menu flex max-sm:ml-auto max-sm:gap-5 md:gap-10">
+                            <li class="flex cursor-pointer items-center gap-2 pr-[30px] text-[16px] hover:text-red-800">UA</li>
+                            <li class="flex cursor-pointer items-center"><ion-icon name="bag-outline" class="w-[24px] h-[24px] hover:text-red-800"></ion-icon></li>
                         </ul>
                     </div>
                 </div>
