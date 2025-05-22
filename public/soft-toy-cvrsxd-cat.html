@@ -17,12 +17,12 @@
             width: 114px;
             height: 100vh;
             overflow: hidden;
+            display: none;
         }
 
-        @media (max-width: 640px) {
+        @media (min-width: 1024px) {
             .infinite-scroll {
-                right: 0;
-                transform: translateX(33.333%);
+                display: block;
             }
         }
 
@@ -145,6 +145,56 @@
             width: 100%;
             text-align: center;
             padding: 10px 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .main-image-container {
+                transform: none !important;
+                scale: 1 !important;
+            }
+
+            .main-image-container img {
+                transform: none !important;
+                scale: 1 !important;
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .circle {
+                transform: none !important;
+                scale: 1 !important;
+            }
+
+            .bg {
+                transform: none !important;
+                scale: 1 !important;
+            }
+        }
+
+        .container {
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        @media (max-width: 640px) {
+            .size-selector-container {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
         }
     </style>
 </head>
